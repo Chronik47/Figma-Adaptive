@@ -36,6 +36,10 @@
     background: #222;
 }
 
+.disable {
+    display: flex;
+    align-items: center;
+}
 
 .top_content {
     display: flex;
@@ -53,9 +57,10 @@
 
 .top_text {
     display: inline-block;
+    flex-wrap: nowrap;
     border-left: 12px solid #F16D7F;
-    padding-left: 16px;
     margin-bottom: 90px;
+    padding-left: 16px;
 }
 
 .top_content_text {
@@ -65,7 +70,6 @@
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    width: 377px;
 }
 
 .of_luxerious {
@@ -87,7 +91,7 @@
 }
 
 .offer {
-    margin-top: 65px;
+    padding-top: 65px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 180px;
@@ -95,7 +99,6 @@
 }
 
 .offer_img {
-    width: 100%;
     position: relative;
     z-index: -1;
 }
@@ -121,7 +124,6 @@
 }
 
 .offer_card {
-    position: relative;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -138,7 +140,7 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    padding-top: 96px;
+    margin-top: 96px;
 }
 
 .feature_item_title {
@@ -227,7 +229,7 @@
     padding: 15px 39px;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1137px) {
 
     .center {
         padding-left: calc(50% - 735px/2);
@@ -239,6 +241,10 @@
         justify-content: center;
         padding-left: calc(50% - 768px/2);
         padding-right: calc(50% - 768px/2);
+    }
+
+    .top_text {
+        margin-bottom: 0px;
     }
 
     .top_content_text {
@@ -258,8 +264,12 @@
         gap: 19px;
     }
 
+    .offer_img {
+        width: 100%;
+    }
+
     .feature_item {
-        padding-top: 110px;
+        margin-top: 110px;
         gap: 3.3px;
     }
 
@@ -284,5 +294,84 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+}
+
+@media (max-width:767px) {
+
+    .center {
+        padding-left: calc(50% - 359px/2);
+        padding-right: calc(50% - 359px/2);
+    }
+
+    .header {
+        padding-left: calc(50% - 343px/2);
+        padding-right: calc(50% - 343px/2);
+    }
+
+    .disable_on_mobile {
+        display: none;
+    }
+
+    .top_img {
+        display: none;
+    }
+
+    .top_text {
+        margin-top: 148px;
+        margin-right: 56px;
+        margin-left: 56px;
+        margin-bottom: 148px;
+    }
+
+    .top_content_text {
+        font-size: 38px;
+    }
+
+    .of_luxerious {
+        font-size: 20px;
+    }
+
+    .top_rose_red {
+        font-size: 20px;
+    }
+
+    .offer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 111px;
+        padding-top: 64px;
+    }
+
+    .accessories {
+        grid-column: 1/2;
+    }
+
+    .offer_accessories_img {
+        height: 111px;
+    }
+
+    .feature_item {
+        margin-top: 64px;
+    }
+
+    .catalog {
+        grid-template-columns: repeat(1, 359px);
+        margin-top: 65px;
+    }
+
+    .catalog_card_content {
+        padding: 25px 28.72px 19.95px 18.36px;
+    }
+
+    .catalog_card_titl {
+        margin-bottom: 12.62px;
+    }
+
+    .catalog_card_text {
+        margin-bottom: 18px;
+    }
+
+    .button_product {
+        margin: 40.61px 81px 85px auto;
     }
 }
